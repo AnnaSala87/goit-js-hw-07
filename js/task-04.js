@@ -21,11 +21,10 @@ function createBoxes(amount) {
 function destroyBoxes(){
   document.querySelector("div#boxes").innerHTML='';
 }
-
-document.querySelector("div#controls > button[data-create]").addEventListener("click", ()=>{
+const dataCreateButton = document.querySelector("div#controls > button[data-create]");
+dataCreateButton.addEventListener("click", ()=>{
   let divBoxesAmount = document.querySelector("div#controls > input").value;
   createBoxes(divBoxesAmount);
 });
-document.querySelector("div#controls > button[data-destroy]").addEventListener("click", ()=>{
-  destroyBoxes();
-});
+const dataDestroyButton = document.querySelector("div#controls > button[data-destroy]");
+dataDestroyButton.addEventListener("click", destroyBoxes );

@@ -22,4 +22,5 @@ const tableWithImages = images.map(image => {
   listElementWithImage.insertAdjacentHTML("afterbegin",imageTag.outerHTML);
   return listElementWithImage;
 })
-document.querySelector("ul.gallery").append(...tableWithImages);
+const gallery = document.querySelector("ul.gallery");
+gallery.append(...tableWithImages);

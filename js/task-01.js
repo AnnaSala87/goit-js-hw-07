@@ -1,8 +1,8 @@
-const listaZKategoriami = document.querySelector("ul#categories")
-const tablicaKategorii = listaZKategoriami.querySelectorAll("li.item");
-console.log(tablicaKategorii.length)
+const listOfCategories = document.querySelector("ul#categories")
+const tableOfCategories = listOfCategories.querySelectorAll("li.item");
+console.log(`Number of categories: ${tableOfCategories.length}`)
 //2.
-for(let kategoriaElement of tablicaKategorii){
-    console.log(kategoriaElement.querySelector("h2").textContent);
-    console.log(kategoriaElement.querySelector("ul").querySelectorAll('li').length);
+for(let categoryElement of tableOfCategories){
+    console.log(`Category: ${categoryElement.querySelector("h2").textContent}`);
+    console.log(`Elements: ${categoryElement.querySelector("ul").querySelectorAll('li').length}`);
 }
